@@ -5,15 +5,17 @@ function App() {
 
   const [name,setName] = useState('');
   const[greeting,setGreeting] = useState('');
+  
+  const handleChange = (e) =>{
+    setName(e.target.value);
+  }
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setGreeting(`Hello,${name}`);
+  }
 
-const handleChange = (e) =>{
-  setName(e.target.value);
-}
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  setGreeting(`Hello,${name}`);
-}
+  
   return (
     <div className="App">
       <div className="contents">
