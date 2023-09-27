@@ -12,13 +12,17 @@ const handSubmit=(e)=>
   e.preventDefault();
   setGreeting('Hello, ${name}');
 }
-function App() {
   return (
     <div className="App">
     <div className="contents">
     <h2>Hey!!! Greeting</h3>
-    <form onSubmit
-
+    <form onSubmit={handleSubmit} data-testid="form">
+      <label data-testid="label">Enter name :</label>
+      <input tupe="text"  value={name} onChange={handleChange}/>
+      <button type="submit" data-testid="buttonElement">Say Hello</button>
+    </form>
+    {greeting && <h2>{greeting}<>/h2>}
+    </div>
     </div>
   );
 }
