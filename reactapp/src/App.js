@@ -11,7 +11,7 @@ const handleChange=(e)=>{
   setName(e.target.value);
 }
 
-const handSubmit=(e)=>
+const handleSubmit=(e)=>
 {
   e.preventDefault();
   setGreeting('Hello, ${name}');
@@ -21,12 +21,12 @@ const handSubmit=(e)=>
   <div className="App">
     <div className="contents">
     <h2>Hey!!! Greeting</h2>
-    <form onSubmit={handleSubmit} data-testid="form">
-      <label data-testid="label">Enter name :</label>
-      <input type="text"  value={name} onChange={handleChange}/>
-      <button type="submit" data-testid="buttonElement">Say Hello</button>
-    </form>
-    {greeting && <h2>{greeting}<>/h2>}
+      <form onSubmit={handleSubmit} data-testid="form">
+        <label data-testid="label">Enter name :</label>
+        <input type="text"  value={name} onChange={handleChange}/>
+        <button type="submit" data-testid="buttonElement">Say Hello</button>
+      </form>
+      {greeting && <h2>{greeting}<>/h2>}
     </div>
   </div>
   );
