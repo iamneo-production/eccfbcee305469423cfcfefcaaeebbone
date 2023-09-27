@@ -17,7 +17,7 @@ const handSubmit=(e)=>
 }
 
   return (
-    <div className="App">
+  <div className="App">
     <div className="contents">
     <h2>Hey!!! Greeting</h3>
     <form onSubmit={handleSubmit} data-testid="form">
@@ -27,7 +27,7 @@ const handSubmit=(e)=>
     </form>
     {greeting && <h2>{greeting}<>/h2>}
     </div>
-    </div>
+  </div>
   );
 }
 
