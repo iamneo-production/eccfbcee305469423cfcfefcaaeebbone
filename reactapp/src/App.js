@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React,{useState} from 'react';
+
 function App() {
 
 const[name,setName]=useState('');
@@ -19,10 +20,10 @@ const handSubmit=(e)=>
   return (
   <div className="App">
     <div className="contents">
-    <h2>Hey!!! Greeting</h3>
+    <h2>Hey!!! Greeting</h2>
     <form onSubmit={handleSubmit} data-testid="form">
       <label data-testid="label">Enter name :</label>
-      <input tupe="text"  value={name} onChange={handleChange}/>
+      <input type="text"  value={name} onChange={handleChange}/>
       <button type="submit" data-testid="buttonElement">Say Hello</button>
     </form>
     {greeting && <h2>{greeting}<>/h2>}
